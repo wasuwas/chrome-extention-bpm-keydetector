@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Music Analyzer",
+    "version": "1.0",
+    "description": "タブで流れている音楽のBPMとKEYを検出するChrome拡張機能",
+    "icons": {
+      "48": "icon.png"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
